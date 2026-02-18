@@ -11,12 +11,14 @@ dbConnection()
 
 const app = express()
 
-// app.use(cors())
-// app.use(express.json())
+app.use(cors())
+app.use(express.json())
 
-// app.use("/api/user",userRoute)
+app.use("/api/user",userRoute)
 
 app.listen(PORT, ()=>{
 console.log(`Server is ON : http://localhost:${PORT} `);
 
 })
+
+// http://localhost:5000//api/user
